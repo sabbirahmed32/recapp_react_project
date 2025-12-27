@@ -6,11 +6,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navber from './componants/Navigation/Navber.jsx'
 import Home from './componants/Home/Home.jsx'
 import Products from './componants/Products/Products.jsx'
+import Blogs from './componants/Blogs/Blogs.jsx'
+import About from './componants/About/About.jsx'
+import Contact from './componants/Contact/Contact.jsx'
+import App from './App.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navber />,
+    element: <App></App>,
     children: [
       {
         path: "/home",
@@ -19,6 +23,18 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />
+      },
+      {
+        path: "/Blogs",
+        element: <Blogs></Blogs>
+      },
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
       }
     ]
   }
