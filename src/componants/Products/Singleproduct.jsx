@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 function Singleproduct({ product }) {
   const { image, title, category, price, rating, description } = product;
 
@@ -30,6 +30,7 @@ function Singleproduct({ product }) {
       <p className="text-sm text-gray-600 line-clamp-2">
         {description}
       </p>
+      <Link to={`/product/${product.id}`}><button>Red More..</button></Link>
     </div>
   );
 }
