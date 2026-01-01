@@ -11,6 +11,7 @@ import About from './componants/About/About.jsx'
 import Contact from './componants/Contact/Contact.jsx'
 import App from './App.jsx';
 import Moreinfo from './componants/Moreinfo/Moreinfo.jsx';
+import From from './componants/From/From.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />
+      },
+      {
+        path:"/from",
+        element:<From></From>
       },
       {
         path: "/products",
