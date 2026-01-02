@@ -10,6 +10,9 @@ function From() {
         console.log(e.target.password.value);
     }
 
+    const nameText = (e) => {
+      console.log(e.target.value);
+    }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form onSubmit={handleSubmit} className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg space-y-6">
@@ -24,7 +27,7 @@ function From() {
             Name
           </label>
           <input
-            type="text" name='text'
+            type="text" name='text' onChange={nameText}
             placeholder="Enter your name"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
