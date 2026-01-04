@@ -1,21 +1,21 @@
 import React from 'react'
 
 function From() {
+ 
+  const submitHandal = (e) => {
 
-    const handleSubmit = (e) => {
-         e.preventDefault()
-         
-        console.log(e.target.text.value);
-        console.log(e.target.email.value);
-        console.log(e.target.password.value);
-    }
-
-    const nameText = (e) => {
-      console.log(e.target.value);
-    }
+    e.preventDefault()
+    console.log(e.target.text.value);
+    console.log(e.target.email.value);
+    console.log(e.target.password.value);
+  }
+ 
+ 
+   
+    
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form onSubmit={handleSubmit} className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg space-y-6">
+      <form onSubmit={submitHandal} className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg space-y-6">
         
         <h2 className="text-2xl font-semibold text-center text-gray-800">
           Create Account
@@ -27,7 +27,7 @@ function From() {
             Name
           </label>
           <input
-            type="text" name='text' onChange={nameText}
+            type="text" name='text' 
             placeholder="Enter your name"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
